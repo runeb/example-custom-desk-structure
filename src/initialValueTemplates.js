@@ -1,25 +1,22 @@
 import T from '@sanity/base/initial-value-template-builder'
+import Schema from 'part:@sanity/base/schema'
 
-export default [
-  ...T.defaults(),
+//_source contains only document types declared by user
+const templates = Schema._source.types.map(schemaType => 
 	T.template({
-		id: 'heroPanel-by-region',
-		title: 'Hero panel by region',
-		description: 'Hero panel for a specific region',
-		schemaType: 'heroPanel',
+    schemaType: schemaType.name,
+		id: `${schemaType.name}-has-region`,
+		title: `${schemaType.title} by region`,
+		description: `${schemaType.title} for a specific region`,
 		parameters: [{name: 'regionId', type: 'string'}],
 		value: params => ({
 			region: {_type: 'reference', _ref: params.regionId}
 		})
 	}),
-	T.template({
-		id: 'carousel-by-region',
-		title: 'Carousel by region',
-		description: 'Carousel for a specific region',
-		schemaType: 'carousel',
-		parameters: [{name: 'regionId', type: 'string'}],
-		value: params => ({
-			region: {_type: 'reference', _ref: params.regionId}
-		})
-	})
+)
+  
+
+export default [
+  ...T.defaults(),
+  ...templates
 ]

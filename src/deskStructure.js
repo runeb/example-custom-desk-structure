@@ -29,7 +29,7 @@ export default () =>
 										.filter('_type == "heroPanel" && region._ref == $regionId')
 										.params({regionId})
 										.initialValueTemplates([
-											S.initialValueTemplateItem('heroPanel-by-region', {regionId})
+											S.initialValueTemplateItem('heroPanel-has-region', {regionId})
 										])
 								 ),
 									S.listItem('carousel')
@@ -41,7 +41,7 @@ export default () =>
 											.filter('_type == "carousel" && region._ref == $regionId')
 											.params({regionId})
 											.initialValueTemplates([
-												S.initialValueTemplateItem('carousel-by-region', {regionId})
+												S.initialValueTemplateItem('carousel-has-region', {regionId})
 											])
 									)
 							])
