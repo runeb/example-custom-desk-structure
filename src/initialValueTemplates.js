@@ -2,6 +2,7 @@ import T from '@sanity/base/initial-value-template-builder'
 import Schema from 'part:@sanity/base/schema'
 
 //_source contains only document types declared by user
+//you may also want to filter to schemas of "type: 'document'"
 const templates = Schema._source.types.map(schemaType => 
   T.template({
     schemaType: schemaType.name,
