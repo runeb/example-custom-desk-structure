@@ -1,11 +1,11 @@
 {
   "root": true,
+  "project": {
+    "name": "Example Desk Structure"
+  },
   "api": {
     "projectId": "v5xmo0ze",
     "dataset": "production"
-  },
-  "project": {
-    "name": "Example Desk Structure"
   },
   "plugins": [
     "@sanity/base",
