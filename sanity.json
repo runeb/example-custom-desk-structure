@@ -1,8 +1,8 @@
 {
   "root": true,
   "api": {
-    "projectId": "xg4e0byh",
-    "dataset": "deletemetemplates"
+    "projectId": "v5xmo0ze",
+    "dataset": "production"
   },
   "project": {
     "name": "Example Desk Structure"
