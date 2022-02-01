@@ -4,8 +4,8 @@
     "name": "Example Desk Structure"
   },
   "api": {
-    "projectId": "v5xmo0ze",
-    "dataset": "production"
+    "projectId": "xg4e0byh",
+    "dataset": "deletemetemplates"
   },
   "plugins": [
     "@sanity/base",
